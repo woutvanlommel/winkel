@@ -1,0 +1,37 @@
+.app-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid var(--primary);
+  z-index: 100;
+}
+
+.app-nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.app-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, var(--secondary) 0%, #041f35 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.app-nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(2, 24, 43, 0.3);
+}

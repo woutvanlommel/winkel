@@ -1,0 +1,173 @@
+.detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.detail-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--primary);
+  transform: translateX(-4px);
+}
+
+.detail-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.add-product-section {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+}
+
+.add-product-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.add-product-input {
+  flex: 1;
+  padding: 0.875rem 1.125rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.add-product-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(215, 38, 61, 0.1);
+}
+
+.add-product-button {
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #b01e33 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-product-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(215, 38, 61, 0.3);
+}
+
+.add-product-button:active {
+  transform: translateY(0);
+}
+
+.products-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.products-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.product-item:hover {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+.product-item.checked {
+  opacity: 0.6;
+}
+
+.product-checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.product-checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.product-text {
+  flex: 1;
+  font-size: 1.0625rem;
+  color: var(--secondary);
+  transition: all 0.2s ease;
+}
+
+.product-item.checked .product-text {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.product-delete-button {
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-delete-button:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.empty-products {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.empty-products-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.empty-products p {
+  color: #6b7280;
+  font-size: 1.125rem;
+  margin: 0;
+}
