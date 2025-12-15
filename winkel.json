@@ -1,0 +1,52 @@
+{
+  "winkellijsten": [
+    {
+      "id": "1",
+      "naam": "Boodschappenlijst"
+    },
+    {
+      "id": "2",
+      "naam": "Doe-het-zelf lijst"
+    },
+    {
+      "id": "29af",
+      "naam": "Winkelen"
+    },
+    {
+      "id": "5cb6",
+      "naam": "Zaterdag"
+    }
+  ],
+  "producten": [
+    {
+      "id": "3",
+      "naam": "Eieren",
+      "winkellijst_id": "1",
+      "afgevinkt": false
+    },
+    {
+      "id": "4",
+      "naam": "Spijkers",
+      "winkellijst_id": "2",
+      "afgevinkt": false
+    },
+    {
+      "id": "5",
+      "naam": "Hamer",
+      "winkellijst_id": "2",
+      "afgevinkt": false
+    },
+    {
+      "id": "514c",
+      "naam": "Test",
+      "winkellijst_id": "1",
+      "afgevinkt": false
+    },
+    {
+      "id": "a0ce",
+      "naam": "Melk",
+      "winkellijst_id": "1",
+      "afgevinkt": false
+    }
+  ]
+}

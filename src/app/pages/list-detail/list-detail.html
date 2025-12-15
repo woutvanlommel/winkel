@@ -1,0 +1,85 @@
+<div class="p-6 max-w-2xl mx-auto pb-20">
+  <div class="mb-6">
+    <a routerLink="/" class="text-blue-600 hover:text-blue-800 mb-2 inline-block">
+      ← Terug naar lijsten
+    </a>
+  </div>
+
+  @if (loading) {
+    <div class="text-center py-8">
+      <p class="text-gray-600">Laden...</p>
+    </div>
+  }
+
+  @if (error) {
+    <div class="bg-red-100 text-red-700 p-4 rounded-md mb-4">
+      {{ error }}
+    </div>
+  }
+
+  @if (!loading && !error && list) {
+    <div>
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold">{{ list.winkelwagen }}</h1>
+        <button
+          (click)="deleteList()"
+          class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors"
+        >
+          Lijst verwijderen
+        </button>
+      </div>
+
+      <!-- Product toevoegen formulier -->
+      <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm mb-6">
+        <h2 class="font-semibold mb-3">Product toevoegen</h2>
+        <form (ngSubmit)="addProduct()" class="flex gap-2">
+          <input
+            type="text"
+            [(ngModel)]="newProductName"
+            name="productName"
+            placeholder="Product naam"
+            class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <button
+            type="submit"
+            class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
+          >
+            Toevoegen
+          </button>
+        </form>
+      </div>
+
+      <!-- Producten lijst -->
+      <div class="space-y-2">
+        <h2 class="font-semibold mb-3">Producten ({{ products.length }})</h2>
+        
+        @if (products.length === 0) {
+          <div class="text-center py-8 text-gray-500 bg-gray-50 rounded-lg">
+            Nog geen producten in deze lijst
+          </div>
+        }
+
+        @for (product of products; track product.id) {
+          <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex items-center gap-3">
+            <input
+              type="checkbox"
+              [checked]="product.gekocht"
+              (change)="toggleProductCheck(product)"
+              class="w-5 h-5 cursor-pointer"
+            />
+            <span class="text-lg flex-1" [class.line-through]="product.gekocht" [class.text-gray-400]="product.gekocht">
+              {{ product.product }}
+            </span>
+            <button
+              (click)="deleteProduct(product.id)"
+              class="bg-red-600 text-white px-3 py-1 rounded-md hover:bg-red-700 transition-colors text-sm"
+            >
+              Verwijderen
+            </button>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>
